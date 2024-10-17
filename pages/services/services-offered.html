@@ -46,15 +46,14 @@
 
     /* Background Picture */
     body {
-            background-image: url('../../components/pics/boston-fall.jpg');
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            color: #fff;
-        }
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        color: #fff;
+    }
 
-    .body {
+    .bod {
         max-width: 800px;
         margin: auto;
         background: rgba(0, 0, 0, 0.6); /* Transparent black background */
@@ -64,29 +63,60 @@
 
 
 
+    .btn {
+        display: inline-block;
+        background-color: #FA8072;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #ff6b6b;
+    }
+
+    #logo {
+        border-radius: 15px;
+        
+    }
 
 
-        .btn {
-            display: inline-block;
-            background-color: #FA8072;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-            cursor: pointer;
-        }
+    section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
 
-        .btn:hover {
-            background-color: #ff6b6b;
-        }
+    .section1 {
+        background-image: url('../../components/pics/boston-fall.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .section2 {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    .section3 {
+        background-color: #3498db;
+    }
 </style>
 
 
 </head>
 <body>
-    <div class="bod"> 
+
+    <a href= 'itinerary.html'>  <img src = "../../components/pics/logo.png" 
+        alt ="Logo" id ="logo">  </a>
+
+    <div class="bod section1"> 
         <h1>‘Bos Discovering Boston and Beyond</h1>
 
         <h2>Looking for adventure, culture, or a relaxing weekend in Boston? 
@@ -103,6 +133,27 @@
         <p>Get to know clubs like the Eco Arts Club and Tufts Mountain Club.</p>
 
         <a href="#" class="btn">Book a Trip</a>
+    </div>
+
+
+
+
+    <div class="section2"> 
+        <h1>section2</h1>
+
+        <h2> want to stay close by campus?</h2>
+    </div>
+
+    <div class="section3"> 
+        <h1>section3</h1>
+
+        <h2> want to get off campus to boston </h2>
+    </div>
+
+    <div class="section2"> 
+        <h1>section4 with 2 styler</h1>
+
+        <h2> want to get out of the city and explore new hampsire or maine? </h2>
     </div>
 
   
