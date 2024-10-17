@@ -1,1 +1,64 @@
 <!-- Navigation Bar Component -->
+
+<html>
+  <head>
+    <title>Navbar</title>
+  </head>
+  <style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(244, 229, 250);
+      padding: 10px;
+    }
+    ul#nav {
+      list-style-type: none;
+      font-size: 25px;
+      margin: 0px;
+      padding: 5px;
+    }
+    ul#nav li {
+      display: inline-block;
+      margin-right: 50px;
+      position: relative;
+    }
+    ul#nav li a {
+      text-decoration: none;
+    }
+    .services-dropdown {
+      display: none;
+      position: absolute;
+      background-color: rgb(244, 229, 250);
+      padding: 10px;
+    }
+    .services-dropdown a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+    }
+    .services-dropdown a:hover {
+      background-color: rgb(244, 229, 250);
+    }
+    ul#nav li:hover .services-dropdown {
+      display: block;
+    }
+  </style>
+  <!-- Fixed Navbar -->
+  <div class="navbar">
+    <!-- Nav Menu -->
+    <ul id="nav">
+      <li><a href="">[Logo]</a></li>
+      <li>
+        <a href="">Services Offered</a>
+        <div class="services-dropdown">
+          <a href="">Services</a>
+          <a href="">Destination Guides</a>
+        </div>
+      </li>
+      <li><a href="">Travel Resources</a></li>
+      <li><a href="">About</a></li>
+    </ul>
+  </div>
+</html>
