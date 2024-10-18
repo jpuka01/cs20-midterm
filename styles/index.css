@@ -1,1 +1,30 @@
-/* index.css --> Contains the global variables, styles, and :root selector
+/* index.css --> Contains the global variables, styles, and :root selector */
+
+/* Defines a custom font imported from dafont - Wanderlust */
+@font-face {
+    font-family: 'Wanderlust';
+    src: url('../assets/fonts/Wanderlust.ttf') format('truetype');
+}
+
+:root {
+    /* Colors */
+    --coral-peach: #FA8072;
+    --turquoise: #008080;
+    --off-white: #f5f5f5;
+
+    /* Font family */
+    --primary-font: 'Wanderlust';
+    --secondary-font: 'Arial';
+
+    /* 
+    Font sizes - Desktop 
+    --fs-small:
+    --fs-medium:
+    --fs-large:
+
+    Font sizes - Mobile
+    --fsm-small:
+    --fsm-medium:
+    --fsm-large:
+    */
+}
