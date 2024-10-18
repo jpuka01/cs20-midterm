@@ -1,0 +1,47 @@
+<!-- Home -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <style>
+      body {
+        margin: 0px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      ul {
+        list-style-type: none;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      .content {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Import Navbar -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#navbar").load("components/navbar.html");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <!-- Import Navbar -->
+      <div id="navbar"></div>
+      <!-- Main Section -->
+      <div class="content">
+        Home
+      </div>
+    </div>
+  </body>
+</html>
