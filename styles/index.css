@@ -16,15 +16,28 @@
     --primary-font: 'Wanderlust';
     --secondary-font: 'Arial';
 
-    /* 
-    Font sizes - Desktop 
-    --fs-small:
-    --fs-medium:
-    --fs-large:
+    
+    /* Font sizes - Desktop */
+    --fs-small: 0.75rem;
+    --fs-medium: 1rem;
+    --fs-large: 1.25rem; 
+    --fs-header: 6.375rem; 
 
-    Font sizes - Mobile
-    --fsm-small:
-    --fsm-medium:
-    --fsm-large:
-    */
+    /* Font sizes - Mobile */
+    --fsm-small: 0.625rem;
+    --fsm-medium: 0.875rem;
+    --fsm-large: 1.125rem;
+    --fsm-header: 3.75rem; 
+}
+
+h1 {
+    font-family: var(--primary-font);
+    font-size: var(--fs-header);
+}
+
+/* Mobile Version */
+@media (max-width: 768px) {
+    h1 {
+        font-size: var(--fsm-header);
+    }
 }
