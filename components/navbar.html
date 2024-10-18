@@ -10,8 +10,9 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgb(244, 229, 250);
+      background-color: #40e0d0;
       padding: 10px;
+      font-family: Arial, sans-serif;
     }
     ul#nav {
       list-style-type: none;
@@ -23,15 +24,25 @@
       display: inline-block;
       margin-right: 50px;
       position: relative;
+      line-height: 50px;
+    }
+    ul#nav li img {
+      height: 50px;
+      width: auto;
+      vertical-align: middle;
     }
     ul#nav li a {
       text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
     }
     .services-dropdown {
       display: none;
       position: absolute;
-      background-color: rgb(244, 229, 250);
+      background-color: #40e0d0;
       padding: 10px;
+      min-width: 100%;
+      box-sizing: border-box;
     }
     .services-dropdown a {
       display: block;
@@ -39,17 +50,24 @@
       text-decoration: none;
     }
     .services-dropdown a:hover {
-      background-color: rgb(244, 229, 250);
+      background-color: #40e0d0;
     }
     ul#nav li:hover .services-dropdown {
       display: block;
+      font-size: 15px;
     }
   </style>
   <!-- Fixed Navbar -->
   <div class="navbar">
     <!-- Nav Menu -->
     <ul id="nav">
-      <li><a href="">[Logo]</a></li>
+      <li>
+        <a href="../index.html"
+          ><img
+            src="https://github.com/jpuka01/cs20-midterm/blob/main/assets/logo.png?raw=true"
+            alt="Logo"
+        /></a>
+      </li>
       <li>
         <a href="">Services Offered</a>
         <div class="services-dropdown">
