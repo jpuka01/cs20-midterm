@@ -1,2 +1,77 @@
 <!-- About Page -->
- <!-- test - justin -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - 'Bos in Boston</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../styles/index.css">
+    
+    <!-- Internal Styling -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .landing-img {
+            background-image: url('../assets/img/about-bg.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+        .landing-catchphrase {
+            color: turquoise;
+            font-family: var(--primary-font);
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<!-- Imported Navigation Bar -->
+<script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+</script>
+<script>
+    $(function () {
+        $("#navbar").load("../components/navbar.html");
+    });
+</script>
+
+<!-- Content -->
+<body> 
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+    
+    <!-- Landing Section -->
+    <div class="landing-img">
+        <div class="landing-catchphrase">
+            <h1>By the 'Bos</h1>
+            <h1>For the 'Bos</h1>
+        </div>
+    </div>
+
+    <!-- Text Blurb 1 -->
+     <div class="text-blurb">
+        <h2>About Bos in Boston</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum, nunc vel fermentum pulvinar, neque sapien tempor risus, ut condimentum arcu ligula in nunc. Nulla facilisi. Donec sagittis, dui vel vestibulum fermentum, nisi mauris condimentum lectus, in semper mi eros id lectus. Sed vel odio non lectus luctus consectetur. Donec vel diam vel felis fermentum lobortis.</p>
+     </div>
+    <!-- Columns -->
+    <!-- About -->
+</body>
+
+<!-- Footer -->
+<footer>
+
+</footer>
+</html>
