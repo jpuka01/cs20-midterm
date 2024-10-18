@@ -10,6 +10,10 @@
     
     <!-- Internal Styling -->
     <style>
+        /* Base font - 16px = 1rem */
+        html {
+            font-size: 16px;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -25,13 +29,35 @@
             display: flex;
             text-align: center;
             align-items: center;
+            flex-direction: column;
         }
-        .landing-catchphrase {
-            color: turquoise;
-            font-family: var(--primary-font);
+        .landing-catchphrase-1 {
+            background-color: #fa8072ca;
+            color: var(--turquoise);
             justify-content: center;
             text-align: center;
             align-items: center;
+            padding: 4px 14px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+        }
+        .landing-catchphrase-2 {
+            background-color: #008080ca;
+            color: var(--coral-peach);
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 4px 16px;
+            margin-top: 10px;
+            border-radius: 15px;
+        }
+        
+        /* Mobile Version */
+        @media (max-width: 768px) {
+            .landing-catchphrase-1, .landing-catchphrase-2 {
+                width: 80%; 
+                padding: 8px 16px; 
+            }
         }
     </style>
 </head>
@@ -55,9 +81,12 @@
     
     <!-- Landing Section -->
     <div class="landing-img">
-        <div class="landing-catchphrase">
+        <div class="landing-catchphrase-1">
             <h1>By the 'Bos</h1>
+        </div>
+        <div class="landing-catchphrase-2">
             <h1>For the 'Bos</h1>
+            </div>
         </div>
     </div>
 
