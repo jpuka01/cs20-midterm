@@ -3,11 +3,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles/index.css" />
     <title>FAQs</title>
     <style>
       body {
         margin: 0px;
-        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       }
       ul {
         list-style-type: none;
@@ -18,17 +21,19 @@
         height: 100vh;
       }
       .content {
-        padding-top: 60px;
+        padding-top: 81.31px;
         text-align: left;
         max-width: 70%;
         margin: 0 auto;
         line-height: 35px;
       }
       .content .question {
-        font-size: 25px;
-        color: #ffa42c;
+        font-family: var(--primary-font);
+        font-size: 30px;
+        color: var(--coral-peach);
       }
       .content .answer {
+        font-family: var(--secondary-font);
         font-size: 18px;
       }
     </style>
@@ -37,7 +42,8 @@
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script>
       $(function () {
         $("#navbar").load("../components/navbar.html");
@@ -62,9 +68,9 @@
           <br />
           <li class="question">How do I stay safe while traveling?</li>
           <li class="answer">
-            Stay aware of your surroundings, avoid displaying valuable items
-            in public, and research local safety conditions before traveling.
-            Use hotel safes for your valuables and keep copies of important
+            Stay aware of your surroundings, avoid displaying valuable items in
+            public, and research local safety conditions before traveling. Use
+            hotel safes for your valuables and keep copies of important
             documents in case of theft or loss.
           </li>
           <br />
@@ -85,8 +91,8 @@
           <br />
           <li class="question">What is the best way to budget?</li>
           <li class="answer">
-            Many expenses will come with the package, but be sure to set
-            aside extra money for discretionary spending.
+            Many expenses will come with the package, but be sure to set aside
+            extra money for discretionary spending.
           </li>
           <br />
         </ul>
