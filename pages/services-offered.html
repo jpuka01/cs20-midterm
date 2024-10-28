@@ -157,9 +157,27 @@
 
 </head>
 
-
-
 <body>
+
+
+
+
+    <script>
+        window.onload = function() {
+            submitForm();
+        }
+
+        function submitForm() {
+            submitButton = document.querySelector('.form-submit');
+            submitButton.addEventListener('click', function(event) {
+            alert('Form submitted successfully! Get excited!');
+            });
+        }
+    </script>
+
+
+
+
 <!-- body and nav -->
 
 <div class="flex-container">
