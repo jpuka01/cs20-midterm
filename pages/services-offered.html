@@ -2,87 +2,75 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services Offered - 'Bos in Boston</title>
-    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles/index.css" />
 
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
 
-
-<style> 
-
-    body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-
-    .flex-container {
+      .flex-container {
         display: flex;
         flex-direction: column;
         height: 100vh;
       }
-    .title-page {
-            background-image: url('../assets/img/boston-fall.jpg');
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-            width: 100%;
-            justify-content: center;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-    }
+      .title-page {
+        background-image: url("../assets/img/boston-fall.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 81.31px;
+      }
 
-    .text-box {
-      background-color:#40e0d0ca;
-      padding: 20px 40px;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 10px;
+      .text-box {
+        background-color: #40e0d0ca;
+        padding: 20px 40px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 10px;
+      }
 
-
-    }
-
-        h1 {
+      h1 {
         margin: 0;
         font-weight: bold;
-        color: #FA8072;
+        color: #fa8072;
         text-align: center;
         margin-bottom: 20px;
         border-radius: 15px;
-    }
+      }
 
-
-
-    h2 
-    {
+      h2 {
         color: #008080;
         margin: 20px 0;
         font-size: 50px;
         text-align: center;
-    }
+      }
 
-    p 
-    {
-        font-size: 16px;
+      p {
+        font-size: 15px;
         margin: 10px 0;
         line-height: 1.6;
         margin: 10px 0;
         text-align: center;
         color: #008080;
+      }
 
-    }
-
-
-
-
-
-    .btn {
+      .btn {
         display: inline-block;
-        background-color: #FA8072;
+        background-color: #fa8072;
         color: rgb(255, 255, 255);
         padding: 5px;
         border: none;
@@ -90,181 +78,151 @@
         text-decoration: none;
         margin-top: 10px;
         cursor: pointer;
-        
-    }
+      }
 
-    .btn:hover {
+      .btn:hover {
         background-color: #008080;
-    }
+      }
 
-
-
-
-    .form {
-        max-width: 600px; 
-        margin: auto; 
-        padding: 20px; 
-        background-color: #f6f6f6; 
+      .form {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f6f6f6;
         border-radius: 8px;
         font-family: Arial, sans-serif;
-            font-size: 18px; 
-            color: #008080;
-        
-
-    }
-    .form-options-style {
-        width: 100%; 
+        font-size: 18px;
+        color: #008080;
+      }
+      .form-options-style {
+        width: 100%;
         padding: 10px;
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
         border-radius: 5px;
-        
+      }
 
-    }
+      .form-submit {
+        width: 100%;
+        padding: 14px;
+        background-color: #fa8072;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
 
-
-
-    .form-submit {
-            width: 100%;
-            padding: 14px;
-            background-color: #FA8072;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-submit:hover {
-            background-color: #008080;
-
-        }
-
-</style>
+      .form-submit:hover {
+        background-color: #008080;
+      }
+    </style>
 
     <!-- Import Navbar -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script>
       $(function () {
         $("#navbar").load("../components/navbar.html");
       });
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- body and nav -->
+    <div class="flex-container">
+      <div id="navbar"></div>
 
-
-
-
-
-
-
-
-<!-- body and nav -->
-
-<div class="flex-container">
-    <div id="navbar"></div>
-
-    <div class = "title-page">
-        <div class="text-box"> 
-                <h1>Boston and Beyond </h1>
-            <p> <strong>Adventures, Getaways, and Fun </strong></p>
+      <div class="title-page">
+        <div class="text-box">
+          <h1>Boston and Beyond</h1>
+          <p><strong>Adventures, Getaways, and Fun</strong></p>
         </div>
-    </div>
+      </div>
 
-    <div> 
-        <h2> Boston Getaways </h2>
-            <p> <strong> Join us for the perfect escape from campus! </strong>  
-            </br> Explore Boston's city 
-                life weather you are feeling a fun adventure or relaxing picnic,  </p>
-            <p> Check out our curated itineraries   <a href="destination-guides.html" class="btn"> here</a>
-                and plan your next adventure 
-                with us today!
-            </p>
-            <p> <strong> Trips every Saturday 11AM - 1 PM EST for free! </strong>
-            </p>
-            <p> Fill this form by Wednesday Noon EST to be considered for 
-                that coming Saturday's excursion.
-            </p>
-    </div>
-<div>
-    <form class = "form"> 
-    
-    <!-- form part1 type in email-->
-    <label>First & Last Name :</label>
-    <div> 
-        <input type="text" name="name" id="name" placeholder="First Last" 
-        style="width: 100%; padding: 10px; margin-bottom: 15px;">
-    </div>
+      <div>
+        <h2>Boston Getaways</h2>
+        <p>
+          <strong>Join us for the perfect escape from campus!</strong
+          ><br />Explore Boston's city life whether you are feeling a fun
+          adventure or a relaxing picnic.
+        </p>
+        <p>
+          Check out our curated itineraries
+          <a href="destination-guides.html" class="btn">here</a> and plan your
+          next adventure with us today!
+        </p>
+        <p><strong>Trips every Saturday 11 AM - 1 PM EST for free!</strong></p>
+        <p>
+          Fill this form by Wednesday Noon EST to be considered for that coming
+          Saturday's excursion.
+        </p>
+      </div>
 
-    <label>Email:</label>
-        <input type="text" name="email" id="email1" placeholder="yourname@example.com" 
-            style="width: 100%; padding: 10px; margin-bottom: 15px;">
-    
-    <!-- form part2 type in email-->
-            <div> 
-                <label> Your Itinerary:</label>
-                <!-- form part3 choose itinerary-->
-        
-                <select class = "form-options-style" id="itinerary" name="itinerary" >
-                    <option value="default">Select </option>
-                    <option value="mfa-museum">Museum of Fine Arts </option>
-                    <option value="north-end">North End</option>
-                    <option value="seaport"> Seaport </option>
-                    <option value="cambridge"> Cambridge </option>
-                    <option value="davis-square">Davis Square </option>
-                    <option value="picnic-common">Boston Commons</option>
-                </select>
-            </br>
-            </div>
-            <!-- form part3 choose itinerary-->
-            <div>
+      <div>
+        <form class="form">
+          <label> Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="First Last"
+            required
+          />
+          <label>Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email1"
+            placeholder="yourname@example.com"
+            required
+          />
+          <br /> <br />
+          <label>Your Itinerary:</label>
+          <select
+            class="form-options-style"
+            id="itinerary"
+            name="itinerary"
+            required
+          >
+            <option value="default">Select</option>
+            <option value="mfa-museum">Museum of Fine Arts</option>
+            <option value="north-end">North End</option>
+            <option value="seaport">Seaport</option>
+            <option value="cambridge">Cambridge</option>
+            <option value="davis-square">Davis Square</option>
+            <option value="picnic-common">Boston Commons</option>
+            <option value="fenway">Fenway</option>
+          </select>
 
-            <!-- form part 4 -->
-            <label> Have you gone on a trip this semester? </label>
-            </br>
-            <input type = "radio" name = "which" value = "yes"> <label>Yes, 2 or more</label>
-            </br>
-            <input type = "radio" name = "which" value = "yes"> <label>Yes, only 1</label>
-            </br>
-            <input type = "radio" name = "which" value = "yes"> <label>No</label>
+          <label>Have you gone on a trip this semester?</label>
+          <br /><input type="radio" name="which" value="yes" required />
+          <label>Yes, 2 or more</label>
+          <br /> <input type="radio" name="which" value="yes" />
+          <label>Yes, only 1</label>
+          <br /> <input type="radio" name="which" value="no" /> <label>No</label>
 
-
-            <!-- submit button -->
-                    <input class="form-submit" type="submit" value="Book Your Trip"  >
-            <!-- submit button -->
-            </div>
+          <input class="form-submit" type="submit" value="Book Your Trip" />
         </form>
+      </div>
+
+      <div style="padding-top: 180px">
+        <h2>What are the steps?</h2>
+        <p>
+          <strong >We take care of all the planning to make the perfect Boston day
+            trip</strong>
+        </p>
+        <p>
+          1. Find the adventure you want<br />2. Fill out the above contact
+          form<br />3. Wait to hear back, check your email<br />4. Explore
+          Boston with fellow 'bos
+        </p>
+        <p><strong>Excited to see you soon!</strong></p>
+      </div>
     </div>
-</div>
-
-
-
-
-        <div style = "padding-top: 180px;"> 
-            <h2> what are the steps?</h2>
-            <p> 
-            </strong>We take care of all the planning to make the perfect Boston 
-                day trip </strong> </p>
-            <p> 
-                1. Find the adventure you want 
-                </br>
-                2. Fill out the above contact form 
-                </br>
-                3. Wait to hear back, check your email 
-                </br>
-                4. Explore boston with fellow 'bos
-            </p>
-            <p>
-                <strong> Excitied to see you soon!
-                </strong> </p>
-    </div>
-</div>
-
-
-</body>
+  </body>
 </html>
