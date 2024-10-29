@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Offered - 'Bos in Boston</title>
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #008080;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #40e0d0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #FA8072;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #40e0d0;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .form-select:focus {
+            outline: none;
+            border-color: #FA8072;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #FA8072;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background-color: #008080;
+        }
+
+        .form-title {
+            color: #008080;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Book Your Boston Adventure</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label class="form-label" for="itinerary">Select your itinerary:</label>
+                <select class="form-select" id="itinerary" name="itinerary" required>
+                    <option value="">Choose an adventure...</option>
+                    <option value="mfa-museum">MFA Museum Trip</option>
+                    <option value="north-end">North End Culinary Tour</option>
+                    <option value="seaport">Explore Seaport District</option>
+                    <option value="cambridge">Visit Cambridge Attractions</option>
+                    <option value="davis-square">Davis Square Hangout</option>
+                    <option value="picnic-common">Picnic in the Commons</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="name">Full Name:</label>
+                <input type="text" class="form-input" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="email">Email Address:</label>
+                <input type="email" class="form-input" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="date">Preferred Date:</label>
+                <input type="date" class="form-input" id="date" name="date" required>
+            </div>
+
+            <button type="submit" class="form-submit">Book Your Trip</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Booking submitted successfully!');
+        });
+    </script>
+</body>
+</html>
