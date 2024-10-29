@@ -8,36 +8,71 @@
     <title>Services Offered - 'Bos in Boston</title>
     <link rel="icon" href="../assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="../styles/index.css">
-</head>
+
+<!-- Imported Navigation Bar -->
+<script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+</script>
+<script>
+    $(function () {
+        $("#navbar").load("../components/navbar.html");
+    });
+</script>
+
 <style> 
-    * 
-    {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+    .title-page {
+            background-image: url('../assets/img/boston-fall.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
     }
-    h1 
-    {
-        font-family: var(--primary-font);
+
+    .text-box {
+      background-color:#40e0d0ca;
+      padding: 20px 40px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 10px;
+
+
+    }
+
+        h1 {
+        margin: 0;
+        font-weight: bold;
         color: #FA8072;
-        font-size: 48px;
         text-align: center;
         margin-bottom: 20px;
+        border-radius: 15px;
     }
+
+
 
     h2 
     {
         color: #008080;
-        font-size: 24px;
-        margin: 15px 0;
+        margin: 20px 0;
+        font-size: 50px;
         text-align: center;
-    }
-
-    h3 
-    {
-        color: #008080;
-        font-size: 2opx;
-        margin-top: 30px;
     }
 
     p 
@@ -47,135 +82,203 @@
         line-height: 1.6;
         margin: 10px 0;
         text-align: center;
+        color: #008080;
+
     }
 
-    /* Background Picture */
-    body {
-        background-size: cover;
-        background-position: center;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        color: #fff;
-    }
 
-    .bod {
-        max-width: 800px;
-        margin: auto;
-        background: rgba(0, 0, 0, 0.6); /* Transparent black background */
-        padding: 30px;
-        border-radius: 15px;
-    }
 
 
 
     .btn {
         display: inline-block;
         background-color: #FA8072;
-        color: white;
-        padding: 10px 20px;
+        color: rgb(255, 255, 255);
+        padding: 5px;
         border: none;
         border-radius: 5px;
         text-decoration: none;
         margin-top: 10px;
         cursor: pointer;
-    }
-
-    .btn:hover {
-        background-color: #ff6b6b;
-    }
-
-    #logo {
-        border-radius: 15px;
         
     }
 
+    .btn:hover {
+        background-color: #008080;
+    }
 
-    section {
-        height: 700px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 48px;
-        color: white;
+
+
+
+    .form {
+        max-width: 600px; 
+        margin: auto; 
+        padding: 20px; 
+        background-color: #f6f6f6; 
+        border-radius: 8px;
         font-family: Arial, sans-serif;
+            font-size: 18px; 
+            color: #008080;
+        
+
+    }
+    .form-options-style {
+        width: 100%; 
+        padding: 10px;
+        margin-bottom: 15px; 
+        border-radius: 5px;
+        
+
     }
 
-    .section1 {
-        background-image: url('../assets/img/boston-fall.jpg');
-        background-size: cover;
-        background-position: center;
-    }
 
-    .section2 {
-        background: linear-gradient(to right,#fff, #2f86a1);
-    }
-    .section3 {
-        background-color: #3498db;
-    }
+
+    .form-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #FA8072;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background-color: #008080;
+
+        }
+
 </style>
 
 
+
 </head>
+
 <body>
 
-    <a href= 'itinerary.html'>  <img src = "../assets/img/logo.png" 
-        alt ="Logo" id ="logo">  </a>
 
-    <div class="bod section1"> 
-        <h1>‘Bos Discovering Boston and Beyond</h1>
 
-        <h2>Looking for adventure, culture, or a relaxing weekend in Boston? 
-            Explore our curated excursions designed specifically for Tufts students—
-            whether you want to hit the slopes, dive into Boston’s rich history, 
-            or unwind with a city escape.
-        </h2>
 
-        <h3>Boston Get Aways</h3>
-        <p>Look here to find different itineraries of our group trips.</p>
-        <p>To book a trip, send us an email with your contact info and preferred date for a tour.</p>
+    <script>
+        window.onload = function() {
+            submitForm();
+        }
 
-        <h3>How to Boston Get Aways</h3>
-        <p>Get to know clubs like the Eco Arts Club and Tufts Mountain Club.</p>
-
-        <a href="#" class="btn">Book a Trip</a>
-    </div>
+        function submitForm() {
+            submitButton = document.querySelector('.form-submit');
+            submitButton.addEventListener('click', function(event) {
+            alert('Form submitted successfully! Get excited!');
+            });
+        }
+    </script>
 
 
 
 
-    <div class="section2"> 
-        <h1>section2</h1>
+<!-- body and nav -->
 
-        <h2> want to stay close by campus?</h2>
-    </div>
+<div class="flex-container">
+    <div id="navbar"></div>
 
-    <div class="section3"> 
-        <h1>section3</h1>
-
-        <h2> want to get off campus to boston </h2>
-    </div>
-
-    <div class="section2"> 
-        <h1>section4 with 2 styler</h1>
-
-        <h2> want to get out of the city and explore new hampsire or maine? </h2>
-    </div>
-
-  
-
-
-
-
-
-    <!--create a calender will ahve events each friday post clalssed 4-8 -->
-    <div id="calendar">
-        <div class = "head">
-            <span class = "prev">
-            <a href = "/events?date=2024-09-17"></a> == $0"</span>
-            <span class="month"> October </span>
-            <span class="next">  
-                <a href = "/events?date=2024-09-17"></a> == $0" </span>
+    <div class = "title-page">
+        <div class="text-box"> 
+                <h1>Boston and Beyond </h1>
+            <p> <strong>Adventures, Getaways, and Fun </strong></p>
         </div>
     </div>
+
+    <div> 
+        <h2> Boston Getaways </h2>
+            <p> <strong> Join us for the perfect escape from campus! </strong>  
+            </br> Explore Boston's city 
+                life weather you are feeling a fun adventure or relaxing picnic,  </p>
+            <p> Check out our curated itineraries   <a href="destination-guides.html" class="btn"> here</a>
+                and plan your next adventure 
+                with us today!
+            </p>
+            <p> <strong> Trips every Saturday 11AM - 1 PM EST for free! </strong>
+            </p>
+            <p> Fill this form by Wednesday Noon EST to be considered for 
+                that coming Saturday's excursion.
+            </p>
+    </div>
+<div>
+    <form class = "form"> 
+    
+    <!-- form part1 type in email-->
+    <label>First & Last Name :</label>
+    <div> 
+        <input type="text" name="name" id="name" placeholder="First Last" 
+        style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    </div>
+
+    <label>Email:</label>
+        <input type="text" name="email" id="email1" placeholder="yourname@example.com" 
+            style="width: 100%; padding: 10px; margin-bottom: 15px;">
+    
+    <!-- form part2 type in email-->
+            <div> 
+                <label> Your Itinerary:</label>
+                <!-- form part3 choose itinerary-->
+        
+                <select class = "form-options-style" id="itinerary" name="itinerary" >
+                    <option value="default">Select </option>
+                    <option value="mfa-museum">Museum of Fine Arts </option>
+                    <option value="north-end">North End</option>
+                    <option value="seaport"> Seaport </option>
+                    <option value="cambridge"> Cambridge </option>
+                    <option value="davis-square">Davis Square </option>
+                    <option value="picnic-common">Boston Commons</option>
+                </select>
+            </br>
+            </div>
+            <!-- form part3 choose itinerary-->
+            <div>
+
+            <!-- form part 4 -->
+            <label> Have you gone on a trip this semester? </label>
+            </br>
+            <input type = "radio" name = "which" value = "yes"> <label>Yes, 2 or more</label>
+            </br>
+            <input type = "radio" name = "which" value = "yes"> <label>Yes, only 1</label>
+            </br>
+            <input type = "radio" name = "which" value = "yes"> <label>No</label>
+
+
+            <!-- submit button -->
+                    <input class="form-submit" type="submit" value="Book Your Trip"  >
+            <!-- submit button -->
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+        <div style = "padding-top: 180px;"> 
+            <h2> what are the steps?</h2>
+            <p> 
+            </strong>We take care of all the planning to make the perfect Boston 
+                day trip </strong> </p>
+            <p> 
+                1. Find the adventure you want 
+                </br>
+                2. Fill out the above contact form 
+                </br>
+                3. Wait to hear back, check your email 
+                </br>
+                4. Explore boston with fellow 'bos
+            </p>
+            <p>
+                <strong> Excitied to see you soon!
+                </strong> </p>
+    </div>
+</div>
+
+
 </body>
 </html>
