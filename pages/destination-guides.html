@@ -1,1 +1,347 @@
 <!-- Destination Guides Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desitination Guides - 'Bos in Boston</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/destination-guides.css">
+</head>
+<!-- AIzaSyB-k8pwA9OxPq_hJL4iIH_qbP1EZnHE_Fk -->
+
+<!-- Imported Navigation Bar -->
+<script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+</script>
+<script>
+    $(function () {
+        $("#navbar").load("../components/navbar.html");
+    });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-k8pwA9OxPq_hJL4iIH_qbP1EZnHE_Fk&callback=initMap" async defer></script>
+<script>
+    function initMap() {
+        // Initializes the map centered around Boston
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 42.3601, lng: -71.0589 }, // Boston coordinates
+            zoom: 13,
+            styles: [
+                {
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#ebe3cd"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#523735"
+                    }
+                    ]
+                },
+                {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                    {
+                        "color": "#f5f1e6"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                    {
+                        "color": "#c9b2a6"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                    {
+                        "color": "#dcd2be"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#ae9e90"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#dfd2ae"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#dfd2ae"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#93817c"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                    {
+                        "color": "#a5b076"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#447530"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#f5f1e6"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#fdfcf8"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#f8c967"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                    {
+                        "color": "#e9bc62"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway.controlled_access",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#e98d58"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.highway.controlled_access",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                    {
+                        "color": "#db8555"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#806b63"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#dfd2ae"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#8f7d77"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit.line",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                    {
+                        "color": "#ebe3cd"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "transit.station",
+                    "elementType": "geometry",
+                    "stylers": [
+                    {
+                        "color": "#dfd2ae"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                    {
+                        "color": "#b9d3c2"
+                    }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                    {
+                        "color": "#92998d"
+                    }
+                    ]
+                }
+            ]
+        });
+
+        // Array of locations with names, latitudes, and longitudes
+        const locations = [
+            { name: "Fenway Park", lat: 42.3467, lng: -71.0972 },
+            { name: "Boston Common", lat: 42.3551, lng: -71.0656 },
+            { name: "Boston Tea Party Ships and Museum", lat: 42.3663, lng: -71.0420 },
+            { name: "New England Aquarium", lat: 42.3593, lng: -70.0505 },
+            { name: "Museum of Fine Arts", lat: 42.3396, lng: -71.0942 },
+            { name: "North End", lat: 42.3645, lng: -71.0542 },
+            { name: "Sea Port District", lat: 42.3523, lng: -71.0537 },
+            { name: "Boston Public Library", lat: 42.3493, lng: -71.0784 },
+            { name: "Faneuil Hall Marketplace", lat: 42.3605, lng: -71.0547 },
+            { name: "Cambridge", lat: 42.3736, lng: -71.1097 },
+        ];
+
+        // Custom icon URL
+        const customIcon = {
+            url: "../assets/img/location.png",
+            scaledSize: new google.maps.Size(30, 30),
+        };
+
+        // Loop through the locations and place markers on the map
+        locations.forEach((location) => {
+            const marker = new google.maps.Marker({
+                position: { lat: location.lat, lng: location.lng },
+                map: map,
+                title: location.name,
+                icon: customIcon,
+            });
+        });
+
+        // Info window for each marker
+        const infoWindow = new google.maps.InfoWindow({
+            content: `<h3>${location.name}</h3>`,
+        });
+
+        // Show info window on marker click
+        marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+        });
+
+    }
+</script>
+
+<!-- Contents -->
+<body>
+    <!-- Navigation Bar -->
+    <div id="navbar"></div>
+    <div class="content">
+        <h1>Destination Guides</h1>
+        <div id="map" style="height: 500px; width: 100%;"></div>
+         <!-- Columns -->
+         <div class="container">
+            <h2 class="why-h">Our Top Picks</h2>
+            <div class="section">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>Museum of Fine Arts (MFA)</h3>
+                </div>
+            </div>
+            <div class="section-reverse">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>North End</h3>
+                </div>
+            </div>
+            <div class="section">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>Seaport District</h3>
+                </div>
+            </div>
+            <div class="section-reverse">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>Cambridge</h3>
+                </div>
+            </div>
+            <div class="section">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>Fenway Park</h3>
+                </div>
+            </div>
+            <div class="section-reverse">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>Boston Common</h3>
+                </div>
+            </div>
+            <div class="section">
+                <img src="#" alt="#">
+                <div class="text">
+                    <h3>Faneuil Hall Marketplace</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
