@@ -20,10 +20,10 @@
     --secondary-font: 'Poppins', sans-serif;
 
     /* Font sizes - Desktop */
-    --fs-small: 1rem;
+    --fs-small: 1.35rem;
     --fs-medium: 2.25rem;
     --fs-large: 3.25rem; 
-    --fs-header: 6.375rem; 
+    --fs-header: 8.375rem; 
 
     /* Font sizes - Mobile */
     --fsm-small: 0.875rem;
@@ -32,23 +32,42 @@
     --fsm-header: 3.75rem; 
 }
 
-body {
-    padding-top: 20px;
-}
-
 h1 {
     font-family: var(--primary-font);
     font-size: var(--fs-header);
+    text-shadow: 
+        2px 2px 0 #000000, 
+        -2px -2px 0 #000000, 
+        2px -2px 0 #000000,
+        -2px 2px 0 #000000; 
 }
 
 h2 {
     font-family: var(--primary-font);
     font-size: var(--fs-header);
+    text-shadow: 
+        2px 2px 0 #000000, 
+        -2px -2px 0 #000000, 
+        2px -2px 0 #000000,
+        -2px 2px 0 #000000;  
+}
+
+h3 {
+    text-shadow: 
+        1px 1px 0 #000000, 
+        -1px -1px 0 #000000, 
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000;  
 }
 
 p {
     font-family: var(--secondary-font);
     font-size: var(--fs-medium);
+    text-shadow: 
+        1px 1px 0 #000000, 
+        -1px -1px 0 #000000, 
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000; 
 }
 
 /* Mobile Version */

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/destination-guides.css">
 </head>
-<!-- AIzaSyB-k8pwA9OxPq_hJL4iIH_qbP1EZnHE_Fk -->
 
 <!-- Imported Navigation Bar -->
 <script
@@ -22,8 +21,17 @@
         $("#navbar").load("../components/navbar.html");
     });
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-k8pwA9OxPq_hJL4iIH_qbP1EZnHE_Fk&callback=initMap" async defer></script>
+
+<!-- Google Maps API -->
+<script src="../config.js"></script>
 <script>
+    function loadGoogleMapsAPI() {
+        const script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+    }
     function initMap() {
         // Initializes the map centered around Boston
         const map = new google.maps.Map(document.getElementById("map"), {
@@ -287,6 +295,9 @@
         });
 
     }
+
+    // Load Google Maps API
+    loadGoogleMapsAPI();
 </script>
 
 <!-- Contents -->
@@ -295,50 +306,59 @@
     <div id="navbar"></div>
     <div class="content">
         <h1>Destination Guides</h1>
-        <div id="map" style="height: 500px; width: 100%;"></div>
+        <div class="map-wrapper">
+            <div id="map" style="height: 600px; width: 70%;"></div>
+        </div>
          <!-- Columns -->
          <div class="container">
             <h2 class="why-h">Our Top Picks</h2>
             <div class="section">
-                <img src="#" alt="#">
+                <img src="../assets/img/mfa.jpg" alt="mfa">
                 <div class="text">
                     <h3>Museum of Fine Arts (MFA)</h3>
+                    <p>Where Art Meets Inspiration - Explore Masterpieces from Around the World</p>
                 </div>
             </div>
             <div class="section-reverse">
-                <img src="#" alt="#">
+                <img src="../assets/img/northend.jpg" alt="north-end">
                 <div class="text">
                     <h3>North End</h3>
+                    <p>A Taste of Italy in Boston - Cobbled Streets, Cannolis, and Culture</p>
                 </div>
             </div>
             <div class="section">
-                <img src="#" alt="#">
+                <img src="../assets/img/seaport.jpg" alt="seaport">
                 <div class="text">
                     <h3>Seaport District</h3>
+                    <p>Boston's Modern Waterfront - Trendy Dining, Scenic Views, and Nightlife</p>
                 </div>
             </div>
             <div class="section-reverse">
-                <img src="#" alt="#">
+                <img src="../assets/img/cambridge.jpg" alt="cambridge">
                 <div class="text">
                     <h3>Cambridge</h3>
+                    <p>Intellectual Heartbeat of Boston - From Ivy League Halls to Innovative Hubs</p>
                 </div>
             </div>
             <div class="section">
-                <img src="#" alt="#">
+                <img src="../assets/img/fenway.jpg" alt="fenway">
                 <div class="text">
                     <h3>Fenway Park</h3>
+                    <p>Home of the Green Monster - Legendary Baseball and Vibrant Local Flavor</p>
                 </div>
             </div>
             <div class="section-reverse">
-                <img src="#" alt="#">
+                <img src="../assets/img/boston-common.jpg" alt="boston-commons">
                 <div class="text">
                     <h3>Boston Common</h3>
+                    <p>Boston's Oldest Park - A Green Oasis in the Heart of the City</p>
                 </div>
             </div>
             <div class="section">
-                <img src="#" alt="#">
+                <img src="../assets/img/faneuil.jpg" alt="faneuil">
                 <div class="text">
                     <h3>Faneuil Hall Marketplace</h3>
+                    <p>Boston's Historic Marketplace - Shop, Dine, and Revel in Tradition</p>
                 </div>
             </div>
         </div>

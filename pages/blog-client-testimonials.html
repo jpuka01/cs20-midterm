@@ -10,40 +10,145 @@
 <link rel="icon" href="../assets/img/favicon.png" type="image/png">
 <link rel="stylesheet" href="../styles/blog-travel-resources.css">
 </head>
+
+<script>
+        const images = [
+              '../assets/img/Museum-of-Fine-Arts.jpg',
+              '../assets/img/Mfa_img1.jpeg',
+              '../assets/img/Mfa_img2.jpg',
+              '../assets/img/Mfa_img3.jpeg',
+              '../assets/img/Mfa_img4.jpeg',
+        ];
+
+        let currImg = 0;
+
+        function changeImg(direction){
+                currImg += direction;
+                if (currImg < 0){
+                  currImg = images.length - 1;
+                } else if (currImg >= images.length){
+                  currImg = 0;
+                }
+                document.getElementById('image').src = images[currImg];
+        }
+</script>
+
        <body>
-        <div class="navbar">
-          <!-- Nav Menu -->
-          <ul id="nav">
-            <li>
-              <a href="../index.html"
-                ><img
-                  src="../assets/img/logo.png"
-                  alt="Logo"
-              /></a>
-            </li>
-            <li>
-              <a href="">Services Offered</a>
-              <div class="services-dropdown">
-                <a href="../pages/services-offered.html">Services</a>
-                <a href="../pages/destination-guides.html">Destination Guides</a>
-              </div>
-            </li>
-            <li><a href="">Travel Resources</a></li>
-            <li><a href="">About</a></li>
-          </ul>
-        </div>
-              <header class = "main_header">
+                <div class="navbar">
+                  <!-- Nav Menu -->
+                  <ul id="nav">
+                    <li>
+                      <a href="../index.html"
+                        ><img
+                          src="../assets/img/logo.png"
+                          alt="Logo"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="">Services Offered</a>
+                      <div class="services-dropdown">
+                        <a href="../pages/services-offered.html">Services</a>
+                        <a href="../pages/destination-guides.html">Destination Guides</a>
+                      </div>
+                    </li>
+                    <li><a href="">Travel Resources</a></li>
+                    <li><a href="">About</a></li>
+                  </ul>
+                </div>
 
-                     <h1 class = "text"> Explore Boston's greatest artistic treasure! <h1>
-                     <img class = "image1">
-              </header>
+                <header class = "main_header">
 
-              <footer>
-                <p>&copy; 'Bos in Boston. All rights reserved.</p>
-              </footer>
+                      <h1 class = "title"> Discover the Artful Wonders of the Museum of Fine Arts, Boston <h1>
+                      <h2 id = "subheading"> 
+                              Nestled in the heart of Boston, the Museum of Fine Arts (MFA) stands as a beacon of creativity and cultural richness. 
+                              Here’s why a visit to this incredible institution should be on your must-do list!
+                      </h2>  
+                      <div class = "images">
+                            <button class = "prev" onclick = changeImg(-1)> < </button>
+                            <img id = "image" src = "../assets/img/Museum-of-Fine-Arts.jpg">
+                            <button class = "next" onclick = changeImg(1)> > </button>
+                      </div>
+                </header>
 
-       
+                <h2 class = "subheading"> A Diverse Collection That Inspires</h2>  
 
+                <h2 class = "text">
+                        The MFA boasts over 450,000 works of art, making it one of the largest art museums in the United States. 
+                        As you stroll through its galleries, you’ll encounter a rich tapestry of artistic expression:
+                </h2>
+                      
+                <h2 class = "text">
+                        American Art: From the early colonial period to contemporary masterpieces, the American collection showcases the diverse narratives that have shaped our nation. 
+                        Don’t miss iconic works by artists like John Singer Sargent and Georgia O’Keeffe, which reflect the evolving spirit of American culture. 
+                </h2>  
 
-       </body> 
+                <h2 class = "text">
+                        European Paintings: Wander into the European galleries, where you can stand in awe of masterpieces by the likes of Monet, Van Gogh, and Rembrandt. 
+                        The museum’s impressive collection includes stunning landscapes and vibrant portraits that have influenced generations of artists. 
+                </h2>
+
+                <h2 class = "text">
+                        Asian Art: The MFA’s Asian art collection is a treasure trove of beauty and craftsmanship. 
+                        Featuring pieces from China, Japan, and India, this collection invites you to explore the rich cultural heritage of Asia, including exquisite textiles, ceramics, and ancient scrolls.
+                </h2>
+
+                <h2 class = "text">
+                        Ancient Art: Step back in time as you marvel at Egyptian artifacts and classical sculptures. 
+                        The ancient art collection offers a glimpse into civilizations long past, providing context and depth to the evolution of human creativity.
+
+                </h2>
+
+                <h2 class = "subheading"> Engaging Special Exhibitions </h2>
+
+                <h2 class = "text">
+                        The MFA is not just about its permanent collections; it also hosts rotating special exhibitions that keep the experience fresh and exciting. 
+                        Whether it’s a deep dive into contemporary issues or a celebration of a specific artist’s work, there’s always something new to discover. 
+                        Recent exhibits have spotlighted underrepresented voices and innovative artistic practices, making each visit a unique adventure.
+                </h2>  
+
+                <h2 class = "subheading"> Interactive and Family-Friendly Experiences </h2>
+                      
+                <h2 class = "text">
+                        The MFA goes beyond traditional museum visits with a variety of interactive programs and activities. 
+                        From workshops and lectures to guided tours that deepen your understanding of the art, there’s something for everyone. 
+                        Families will appreciate the kid-friendly exhibits and art-making activities designed to inspire the next generation of artists.
+                </h2>  
+
+                <h2 class = "subheading"> Conclusion </h2>
+
+                <h2 class = "text">
+                        Visiting the Museum of Fine Arts, Boston is more than just a trip to an art museum; it’s an opportunity to immerse yourself in a world of creativity and inspiration. Whether you’re an art aficionado or just curious to explore, the MFA offers a rich and rewarding experience. Be sure to check their website for current exhibitions and events, and prepare to be amazed by the artful wonders waiting for you in Boston!
+
+                </h2>
+
+                <h1 class = "subheading"> Hear what recent visitors have to say! </h1>
+
+                <div class = "clients">
+                        <div class = "bubble"> 
+                                        Angelique W says: <br>
+                                        "I've never been to the MFA before. I booked on a whim and Bo's in Boston
+                                        took care of the rest, they even helped me get there!"
+                        </div>
+                        <div class = "bubble">
+                                        Timmothy T says: <br>
+                                        "The MFA tour was so much fun! We saw lots of art and our tour guides knew so much,
+                                        I'm definitely booking with Bo's in Boston again!
+                        </div>
+                        <div class = "bubble"> 
+                                        Sarah G says: <br>
+                                        "I loved every second of it! I am originally from New York City, the the tours
+                                        with Bo's in Boston were the highlight of my trip!"
+                        </div>
+
+                </div>    
+
+                <h2 class = "subheading"> Up Next: </h2>
+                <a class = "link" href ="../pages/travel-resources.html"> <h2 id = "subheading">Check out our travel resources!</h2></a>
+
+                <footer>
+                        <p>&copy; 'Bos in Boston. All rights reserved.</p>
+                </footer>
+
+        </body> 
+
 </html>

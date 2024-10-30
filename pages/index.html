@@ -11,7 +11,6 @@
     <style>
       body {
         margin: 0px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
       ul {
         list-style-type: none;
@@ -22,7 +21,65 @@
         height: 100vh;
       }
       .content {
-        padding-top: 60px;
+        padding-top: 90px;
+      }
+      .section {
+        margin: 100px;
+      }
+      .landing-img {
+        background-image: url("../assets/img/home-bg.webp");
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .landing-catchphrase-1 {
+        color: var(--turquoise);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 4px 14px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        animation: zoomOut 5s ease-in-out forwards;
+      }
+      @keyframes zoomOut {
+        from {
+          transform: scale(0.9);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      .heading,
+      .text {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+      }
+      .heading {
+        font-size: 70px;
+        font-weight: 50;
+        color: var(--turquoise);
+      }
+      .text {
+        font-size: 35px;
+        color: var(--coral-peach);
+        line-height: 1.8;
+      }
+      .text a {
+        text-decoration: none;
+        color: var(--coral-peach);
+        font-weight: 600;
+      }
+      .text a:hover {
+        color: var(--turquoise);
       }
     </style>
 
@@ -44,7 +101,56 @@
       <div id="navbar"></div>
       <!-- Main Section -->
       <div class="content">
-        Home
+        <div class="landing-img">
+          <div class="landing-catchphrase-1">
+            <h1>Curated excursions </br> designed for Tufts students!</h1>
+          </div>
+        </div>
+
+        <!-- Information -->
+        <div class="section">
+          <h2 class="heading">Our Offerings</h2>
+          <p class="text">
+            Discover how we can make your travel experience unforgettable!
+          </p>
+          <p class="text">
+            <a href="services-offered.html">Our Services</a> - Explore our range
+            of offerings to support your journey.
+          </p>
+          <p class="text">
+            <a href="destination-guides.html">Destination Guides</a> - Get
+            detailed information on popular destinations.
+          </p>
+          <p class="text">
+            <a href="travel-resources.html">Travel Resources</a> - Access
+            essential tips and tricks for getting around.
+          </p>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="section">
+          <h2 class="heading">What Our Travelers Say</h2>
+          <p class="text">
+            "An unforgettable experience!" - Sarah T.<br />"I loved the
+            destinations!" - Mark A.<br />
+            <a href="blog-client-testimonials.html">Hear more from others!</a>
+          </p>
+        </div>
+
+        <!-- About -->
+        <div class="section">
+          <h2 class="heading">What We Do</h2>
+          <p class="text"><a href="about.html">Learn more</a> about us!</p>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="section">
+          <h2 class="heading">Questions or Suggestions?</h2>
+          <p class="text">
+            Visit our <a href="FAQ.html">FAQs page</a> or
+            <a href="contact.html">let us know!</a>
+          </p>
+        </div>
       </div>
     </div>
   </body>
