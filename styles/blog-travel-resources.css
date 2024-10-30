@@ -66,6 +66,10 @@ button{
  color: #ff6352;
 }
 
+.link{
+        text-decoration: none;
+        background-color: #40e0d0;
+}
 .title{
         font-size: 50px;
         font-family: 'Wanerlust';
@@ -96,6 +100,7 @@ button{
         margin-bottom: 15px;
         text-align: justify;
         margin: 25px 100px 25px 125px;
+        font-family: 'Poppins', sans-serif;
 }
 
 .images{
@@ -113,7 +118,25 @@ button{
         display: flex;
 }
 
+.clients{
+        column-count: 3;
+        column-gap: 20px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+}
 
+.bubble{
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #40e0d0;
+        color: #FA8072;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(250, 128, 114, 0.2);
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+
+}
 
 .navbar {
         position: fixed;

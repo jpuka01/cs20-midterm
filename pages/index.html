@@ -21,13 +21,13 @@
         height: 100vh;
       }
       .content {
-        padding-top: 60px;
+        padding-top: 90px;
       }
       .landing-img {
-        background-image: url("../assets/img/about-bg.jpg");
+        background-image: url("../assets/img/home-bg.webp");
         background-position: center;
         background-size: cover;
-        height: 50vh;
+        height: 100vh;
         width: 100%;
         justify-content: center;
         display: flex;
@@ -36,13 +36,21 @@
         flex-direction: column;
       }
       .landing-catchphrase-1 {
-        background-color: #fa8072ca;
         color: var(--turquoise);
         justify-content: center;
         text-align: center;
         align-items: center;
         margin-bottom: 10px;
         border-radius: 15px;
+        animation: zoomOut 5s ease-in-out forwards;
+      }
+      @keyframes zoomOut {
+        from {
+          transform: scale(0.9);
+        }
+        to {
+          transform: scale(1);
+        }
       }
       .section {
         background-color: #ffcac4ca;
@@ -94,7 +102,7 @@
       <div class="content">
         <div class="landing-img">
           <div class="landing-catchphrase-1">
-            <h1>'Bos in Boston</h1>
+            <h1>Curated excursions </br> designed for Tufts students!</h1>
           </div>
         </div>
 
