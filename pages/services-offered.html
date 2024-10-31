@@ -150,9 +150,6 @@
         .form-options-style {
           padding: 8px;
         }
-        .form-options-style {
-          padding: 10px;
-        }
 
         .form-submit {
           padding: 12px;
@@ -215,8 +212,9 @@
   function confirm(event) {
     // event.preventDefault(); // Prevents form submission
      name = document.getElementById('name').value;
+     email = document.getElementById('email').value;
     alert("Thanks for booking your trip " + name +
-    "! We will send a confirmation email shortly, so excited to see you there");
+    "! We will send a confirmation email shortly to " + email + ", so excited to see you there");
   }
 </script>
   </head>
@@ -258,17 +256,20 @@
           <form class="form">
             <label> Name:</label>
             <input
+            class="form-options-style"
               type="text"
               name="name"
               id="name"
               placeholder="First Last"
               required
             />
+            <br/>
             <label>Email:</label>
-            <input
+            <input 
+            class="form-options-style"
               type="email"
               name="email"
-              id="email1"
+              id="email"
               placeholder="yourname@example.com"
               required
             />
