@@ -10,28 +10,50 @@
 <link rel="icon" href="../assets/img/favicon.png" type="image/png">
 <link rel="stylesheet" href="../styles/blog-travel-resources.css">
 </head>
+
+<script>
+     function toggleMenu() {
+                  const navContainer = document.querySelector('.nav-container');
+                  navContainer.classList.toggle('active');
+     }
+</script>
        <body>
-                <div class="navbar">
-                  <!-- Nav Menu -->
-                  <ul id="nav">
-                    <li>
-                      <a href="../index.html"
-                        ><img
-                          src="../assets/img/logo.png"
-                          alt="Logo"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="">Services Offered</a>
-                      <div class="services-dropdown">
-                        <a href="../pages/services-offered.html">Services</a>
-                        <a href="../pages/destination-guides.html">Destination Guides</a>
-                      </div>
-                    </li>
-                    <li><a href="">Travel Resources</a></li>
-                    <li><a href="">About</a></li>
-                  </ul>
-                </div>
+          <div class="navbar">
+               <a href="../pages/index.html">
+                 <h1 class="logo">'Bos in Boston</h1>
+               </a>
+               <div class="hamburger" onclick="toggleMenu()">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+               </div>
+               <div class="nav-container">
+                 <ul id="nav">
+                   <li>
+                     Offerings
+                     <div class="dropdown">
+                       <a href="../pages/services-offered.html">Services</a>
+                       <a href="../pages/destination-guides.html">Destination Guides</a>
+                     </div>
+                   </li>
+                   <li>
+                     Resources
+                     <div class="dropdown">
+                       <a href="../pages/FAQ.html">FAQ</a>
+                       <a href="../pages/blog-client-testimonials.html">Testimonials</a>
+                       <a href="../pages/travel-resources.html">Travel Guide</a>
+                     </div>
+                   </li>
+                   <li>
+                     Discover
+                     <div class="dropdown">
+                       <a href="../pages/about.html">About Us</a>
+                       <a href="../pages/contact.html">Contact Us</a>
+                     </div>
+                   </li>
+                 </ul>
+               </div>
+             </div>
 
                 <header class = "main_header">
                      <h1 id = "title"> Navigating Boston: Our Tips on The Best Ways to Travel to and from Boston </h1>
@@ -45,7 +67,7 @@
                 <h2 class = "subheading"> 1. Public Transit (MBTA) </h2>  
 
                 <h2 class = "text" id = "bold">
-                     ~ One of the most efficient ways to get into Boston is via the Massachusetts Bay Transportation Authority (MBTA) ~
+                    ~ One of the most efficient ways to get into Boston is via the Massachusetts Bay Transportation Authority (MBTA) 
                 </h2>
                       
                 <h2 class = "text">
@@ -60,7 +82,7 @@
                 <h2 class = "subheading"> 2. Biking </h2>
 
                 <h2 class = "text" id = "bold">
-                     ~ For those who enjoy a more active commute, biking is an excellent option ~
+                    ~ For those who enjoy a more active commute, biking is an excellent option 
                 </h2>
 
                 <h2 class = "text">
@@ -76,7 +98,7 @@
                 <h2 class = "subheading"> 3. Ridesharing </h2>
                       
                 <h2 class = "text" id = "bold">
-                     ~ Rideshare services like Uber and Lyft are widely available and offer a hassle-free way to reach your destination ~
+                    ~ Rideshare services like Uber and Lyft are widely available and offer a hassle-free way to reach your destination 
                 </h2>  
 
                 <h2 class = "text">
@@ -86,7 +108,7 @@
                 <h2 class = "subheading"> 4. Walking </h2>
 
                 <h2 class = "text" id ="bold">
-                     ~ For those who live closer to the Boston border, walking can be a delightful way to travel ~
+                    ~ For those who live closer to the Boston border, walking can be a delightful way to travel 
                 </h2>
 
                 <h2 class = "text">
@@ -102,8 +124,9 @@
                 </h2>  
                     
                 <footer>
-                        <p>&copy; 'Bos in Boston. All rights reserved.</p>
-                </footer>
+                    <p>&copy; 'Bos in Boston. All rights reserved.</p>
+                    <button><a href="/pages/contact.html" class="hoover-link"> Contact Us</a></button>
+               </footer> 
 
         </body> 
 
