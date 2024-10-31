@@ -1,212 +1,217 @@
 <!-- About Page -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - 'Bos in Boston</title>
-    <link rel="icon" href="../assets/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="../styles/index.css">
-    
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles/index.css" />
+
     <!-- Internal Styling -->
     <style>
-        /* Base font - 16px = 1rem */
-        html {
-            font-size: 16px;
-            background-color: var(--off-white);
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .content {
-            padding-top: 60px;
-        }
-        .landing-img {
-            background-image: url('../assets/img/about-bg.jpg');
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-            width: 100%;
-            justify-content: center;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .landing-catchphrase-1 {
-            color: var(--turquoise);
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            padding: 4px 14px;
-            margin-bottom: 10px;
-            border-radius: 15px;
-        }
+      /* Base font - 16px = 1rem */
+      html {
+        font-size: 16px;
+        background-color: var(--off-white);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .content {
+        padding-top: 60px;
+      }
+      .landing-img {
+        background-image: url("../assets/img/about-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .landing-catchphrase-1 {
+        color: var(--turquoise);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 4px 14px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+      }
+      .landing-catchphrase-2 {
+        color: var(--coral-peach);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 4px 16px;
+        margin-top: 10px;
+        border-radius: 15px;
+      }
+      .landing-catchphrase-1 h1,
+      .landing-catchphrase-2 h1 {
+        font-size: 10rem;
+      }
+
+      .tbh,
+      .tbp {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+      .tbh {
+        color: var(--turquoise);
+        padding-top: 50px;
+        padding-bottom: 25px;
+      }
+      .tbp {
+        color: var(--coral-peach);
+        padding-bottom: 50px;
+        padding-top: 25px;
+        line-height: 1.6;
+      }
+      .container {
+        width: 100%;
+        padding: 30px;
+      }
+      .why-h {
+        color: var(--turquoise);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 50px;
+      }
+      .section,
+      .section-reverse {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 100%;
+      }
+      .section img,
+      .section-reverse img {
+        width: 50%;
+        max-height: 500px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+      .section .text,
+      .section-reverse .text {
+        width: 50%;
+        padding: 0 1rem;
+        text-align: center;
+        justify-content: center;
+        color: var(--coral-peach);
+        font-size: var(--fs-large);
+        font-family: var(--primary-font);
+      }
+      .section {
+        flex-direction: row;
+      }
+
+      .section-reverse {
+        flex-direction: row-reverse;
+      }
+
+      /* Mobile Version */
+      @media (max-width: 768px) {
+        .landing-catchphrase-1,
         .landing-catchphrase-2 {
-            color: var(--coral-peach);
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            padding: 4px 16px;
-            margin-top: 10px;
-            border-radius: 15px;
+          width: 80%;
+          padding: 8px 16px;
         }
-        .landing-catchphrase-1 h1,
-        .landing-catchphrase-2 h1 {
-            font-size: 10rem;
-        }
-
-        .tbh, .tbp {
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            padding-left: 200px;
-            padding-right: 200px;
-        }
-        .tbh {
-            color: var(--turquoise);
-            padding-top: 50px;
-            padding-bottom: 25px;
-        }
+        .tbh,
         .tbp {
-            color: var(--coral-peach);
-            padding-bottom: 50px;
-            padding-top: 25px;
-            line-height: 1.6;
+          padding-left: 50px;
+          padding-right: 50px;
         }
-        .container {
-            width: 100%;
-            padding: 30px;
-        }
-        .why-h {
-            color: var(--turquoise);
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            padding-top: 25px;
-            padding-bottom: 50px;
-        }
-        .section, .section-reverse {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            width: 100%;
-        }
-        .section img, .section-reverse img {
-            width: 50%;
-            max-height: 500px; 
-            height: auto;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        .section .text, .section-reverse .text {
-            width: 50%;
-            padding: 0 1rem;
-            text-align: center;
-            justify-content: center;
-            color: var(--coral-peach);
-            font-size: var(--fs-large);
-            font-family: var(--primary-font);
-        }
-        .section {
-            flex-direction: row;
-        }
-
+        .section,
         .section-reverse {
-            flex-direction: row-reverse;
+          flex-direction: column;
+          text-align: center;
         }
-        
-        /* Mobile Version */
-        @media (max-width: 768px) {
-            .landing-catchphrase-1, .landing-catchphrase-2 {
-                width: 80%; 
-                padding: 8px 16px; 
-            }
-            .tbh, .tbp {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-            .section, .section-reverse {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<!-- Imported Navigation Bar -->
-<script
+  <!-- Imported Navigation Bar -->
+  <script
     src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous">
-</script>
-<script>
+    crossorigin="anonymous"
+  ></script>
+  <script>
     $(function () {
-        $("#navbar").load("../components/navbar.html");
-        $("#footer").load("../components/footer.html");
+      $("#navbar").load("../components/navbar.html");
+      $("#footer").load("../components/footer.html");
     });
-</script>
+  </script>
 
-<!-- Content -->
-<body> 
+  <!-- Content -->
+  <body>
     <!-- Navigation Bar -->
     <div id="navbar"></div>
-    
+
     <!-- Landing Section -->
     <div class="content">
-        <div class="landing-img">
-            <div class="landing-catchphrase-1">
-                <h1>By the 'Bos</h1>
-            </div>
-            <div class="landing-catchphrase-2">
-                <h1>For the 'Bos</h1>
-                </div>
-            </div>
+      <div class="landing-img">
+        <div class="landing-catchphrase-1">
+          <h1>By the 'Bos</h1>
         </div>
-    
-        <!-- Text Blurb 1 -->
-         <div>
-            <h2 class="tbh">About Us</h2>
-            <p class="tbp">
-                'Bos in Boston is a travel company created by Tufts students, for 
-                Tufts students, offering tailored tours of Boston's most iconic and
-                hidden gems. <br> <br>
-                Our mission is to make exploring the city accessible, 
-                fun, and informative, all while fitting seamlessly into your busy 
-                student life.
-            </p>
-         </div>
-    
-        <!-- Columns -->
-        <div class="container">
-            <h2 class="why-h">Why Choose Us?</h2>
-            <div class="section">
-                <img src="../assets/img/student-photo.jpg" alt="Tailored for Tufts">
-                <div class="text">
-                    <h3>Tailored for Tufts</h3>
-                </div>
-            </div>
-            <div class="section-reverse">
-                <img src="../assets/img/boston-street.jpg" alt="Local Knowledge">
-                <div class="text">
-                    <h3>Local Knowledge</h3>
-                </div>
-            </div>
-            <div class="section">
-                <img src="../assets/img/boston-fun.jpg" alt="Flexible & Fun!">
-                <div class="text">
-                    <h3>Flexible & Fun!</h3>
-                </div>
-            </div>
+        <div class="landing-catchphrase-2">
+          <h1>For the 'Bos</h1>
         </div>
-        <!-- About -->
+      </div>
     </div>
-    </body>
-    
-    <!-- Footer -->
-    <div id="footer"></div>
+
+    <!-- Text Blurb 1 -->
+    <div>
+      <h2 class="tbh">About Us</h2>
+      <p class="tbp">
+        'Bos in Boston is a travel company created by Tufts students, for Tufts
+        students, offering tailored tours of Boston's most iconic and hidden
+        gems. <br />
+        <br />
+        Our mission is to make exploring the city accessible, fun, and
+        informative, all while fitting seamlessly into your busy student life.
+      </p>
+    </div>
+
+    <!-- Columns -->
+    <div class="container">
+      <h2 class="why-h">Why Choose Us?</h2>
+      <div class="section">
+        <img src="../assets/img/student-photo.jpg" alt="Tailored for Tufts" />
+        <div class="text">
+          <h3>Tailored for Tufts</h3>
+        </div>
+      </div>
+      <div class="section-reverse">
+        <img src="../assets/img/boston-street.jpg" alt="Local Knowledge" />
+        <div class="text">
+          <h3>Local Knowledge</h3>
+        </div>
+      </div>
+      <div class="section">
+        <img src="../assets/img/boston-fun.jpg" alt="Flexible & Fun!" />
+        <div class="text">
+          <h3>Flexible & Fun!</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Footer -->
+  <div id="footer"></div>
 </html>

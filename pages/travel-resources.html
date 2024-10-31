@@ -2,134 +2,146 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Resources - 'Bos in Boston</title>
+    <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles/blog-travel-resources.css" />
+  </head>
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travel Resources - 'Bos in Boston</title>
-<link rel="icon" href="../assets/img/favicon.png" type="image/png">
-<link rel="stylesheet" href="../styles/blog-travel-resources.css">
-</head>
+  <script>
+    function toggleMenu() {
+      const navContainer = document.querySelector(".nav-container");
+      navContainer.classList.toggle("active");
+    }
+  </script>
+  <body>
+    <div class="navbar">
+      <a href="../pages/index.html">
+        <h1 class="logo">'Bos in Boston</h1>
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-container">
+        <ul id="nav">
+          <li>
+            Offerings
+            <div class="dropdown">
+              <a href="../pages/services-offered.html">Services</a>
+              <a href="../pages/destination-guides.html">Destination Guides</a>
+            </div>
+          </li>
+          <li>
+            Resources
+            <div class="dropdown">
+              <a href="../pages/FAQ.html">FAQ</a>
+              <a href="../pages/blog-client-testimonials.html">Testimonials</a>
+              <a href="../pages/travel-resources.html">Travel Guide</a>
+            </div>
+          </li>
+          <li>
+            Discover
+            <div class="dropdown">
+              <a href="../pages/about.html">About Us</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-<script>
-     function toggleMenu() {
-                  const navContainer = document.querySelector('.nav-container');
-                  navContainer.classList.toggle('active');
-     }
-</script>
-       <body>
-          <div class="navbar">
-               <a href="../pages/index.html">
-                 <h1 class="logo">'Bos in Boston</h1>
-               </a>
-               <div class="hamburger" onclick="toggleMenu()">
-                 <div></div>
-                 <div></div>
-                 <div></div>
-               </div>
-               <div class="nav-container">
-                 <ul id="nav">
-                   <li>
-                     Offerings
-                     <div class="dropdown">
-                       <a href="../pages/services-offered.html">Services</a>
-                       <a href="../pages/destination-guides.html">Destination Guides</a>
-                     </div>
-                   </li>
-                   <li>
-                     Resources
-                     <div class="dropdown">
-                       <a href="../pages/FAQ.html">FAQ</a>
-                       <a href="../pages/blog-client-testimonials.html">Testimonials</a>
-                       <a href="../pages/travel-resources.html">Travel Guide</a>
-                     </div>
-                   </li>
-                   <li>
-                     Discover
-                     <div class="dropdown">
-                       <a href="../pages/about.html">About Us</a>
-                      </div>
-                   </li>
-                 </ul>
-               </div>
-             </div>
+    <header class="main_header">
+      <h1 id="title">
+        Navigating Boston: Our Tips on The Best Ways to Travel to and from
+        Boston
+      </h1>
+      <h2 id="subheading">
+        If you’re looking to explore Boston but don't know how, there are
+        several convenient options to help you make the journey. Here’s a
+        rundown of the best ways to travel into Boston.
+      </h2>
+    </header>
 
-                <header class = "main_header">
-                     <h1 id = "title"> Navigating Boston: Our Tips on The Best Ways to Travel to and from Boston </h1>
-                     <h2 id = "subheading"> 
-                            If you’re looking to explore Boston but don't know how, there are several convenient options to help you make the journey. 
-                            Here’s a rundown of the best ways to travel into Boston.
-                     </h2> 
-                     
-                </header>
+    <img id="image2" src="../assets/img/train_img.jpg" />
+    <h2 class="subheading">1. Public Transit (MBTA)</h2>
 
-                <img id = "image2" src ="../assets/img/train_img.jpg">
-                <h2 class = "subheading"> 1. Public Transit (MBTA) </h2>  
+    <h2 class="text" id="bold">
+      ~ One of the most efficient ways to get into Boston is via the
+      Massachusetts Bay Transportation Authority (MBTA)
+    </h2>
 
-                <h2 class = "text" id = "bold">
-                    ~ One of the most efficient ways to get into Boston is via the Massachusetts Bay Transportation Authority (MBTA) 
-                </h2>
-                      
-                <h2 class = "text">
-                     Subway (Red Line): Both Somerville and Cambridge are well-served by the Red Line. 
-                     Major stations like Alewife and Kendall/MIT connect you directly to downtown Boston in just a few stops.
-                </h2>  
+    <h2 class="text">
+      Subway (Red Line): Both Somerville and Cambridge are well-served by the
+      Red Line. Major stations like Alewife and Kendall/MIT connect you directly
+      to downtown Boston in just a few stops.
+    </h2>
 
-                <h2 class = "text">
-                     Buses: Several bus routes also link these cities to Boston, with the #47 and #67 being popular choices for commuters.
-                </h2>
+    <h2 class="text">
+      Buses: Several bus routes also link these cities to Boston, with the #47
+      and #67 being popular choices for commuters.
+    </h2>
 
-                <img id = "image2" src ="../assets/img/Biking_img.jpg">
-                <h2 class = "subheading"> 2. Biking </h2>
+    <img id="image2" src="../assets/img/Biking_img.jpg" />
+    <h2 class="subheading">2. Biking</h2>
 
-                <h2 class = "text" id = "bold">
-                    ~ For those who enjoy a more active commute, biking is an excellent option 
-                </h2>
+    <h2 class="text" id="bold">
+      ~ For those who enjoy a more active commute, biking is an excellent option
+    </h2>
 
-                <h2 class = "text">
-                     Bike Lanes and Paths: Both cities have extensive bike infrastructure, allowing you to easily cycle into Boston. 
-                     The Charles River paths offer a scenic route with stunning views.
-                </h2>
+    <h2 class="text">
+      Bike Lanes and Paths: Both cities have extensive bike infrastructure,
+      allowing you to easily cycle into Boston. The Charles River paths offer a
+      scenic route with stunning views.
+    </h2>
 
+    <h2 class="text">
+      Bike Share Programs: Consider using Bluebikes, the regional bike-sharing
+      program, with convenient stations throughout Boston, Somerville, and
+      Cambridge.
+    </h2>
 
-                <h2 class = "text">
-                     Bike Share Programs: Consider using Bluebikes, the regional bike-sharing program, with convenient stations throughout Boston, Somerville, and Cambridge.
-                </h2>  
+    <img id="image2" src="../assets/img/car_img.png" />
+    <h2 class="subheading">3. Ridesharing</h2>
 
-                <img id = "image2" src ="../assets/img/car_img.png">
-                <h2 class = "subheading"> 3. Ridesharing </h2>
-                      
-                <h2 class = "text" id = "bold">
-                    ~ Rideshare services like Uber and Lyft are widely available and offer a hassle-free way to reach your destination 
-                </h2>  
+    <h2 class="text" id="bold">
+      ~ Rideshare services like Uber and Lyft are widely available and offer a
+      hassle-free way to reach your destination
+    </h2>
 
-                <h2 class = "text">
-                     Convenience: This option is particularly great if you're traveling with luggage or in a group. Just request a ride and enjoy the journey without worrying about parking!
-                </h2>  
+    <h2 class="text">
+      Convenience: This option is particularly great if you're traveling with
+      luggage or in a group. Just request a ride and enjoy the journey without
+      worrying about parking!
+    </h2>
 
-                <img id = "image2" src ="../assets/img/walking_img.jpg">
-                <h2 class = "subheading"> 4. Walking </h2>
+    <img id="image2" src="../assets/img/walking_img.jpg" />
+    <h2 class="subheading">4. Walking</h2>
 
-                <h2 class = "text" id ="bold">
-                    ~ For those who live closer to the Boston border, walking can be a delightful way to travel 
-                </h2>
+    <h2 class="text" id="bold">
+      ~ For those who live closer to the Boston border, walking can be a
+      delightful way to travel
+    </h2>
 
-                <h2 class = "text">
-                     Short Distances: Areas like East Cambridge are close enough that a leisurely walk can be both enjoyable and practical.
-                </h2>  
+    <h2 class="text">
+      Short Distances: Areas like East Cambridge are close enough that a
+      leisurely walk can be both enjoyable and practical.
+    </h2>
 
-                <h1 class = "subheading"> Conclusion </h1>
+    <h1 class="subheading">Conclusion</h1>
 
-                <h2 class = "text">
-                     With these options at your disposal, getting from Somerville or Cambridge into Boston is easy and accessible. 
-                     Whether you prefer the convenience of public transit, the freedom of biking, or the comfort of ridesharing, you’ll find a mode of travel that suits your needs. 
-                     So grab your bag and hit the road—Boston is waiting for you!
-                </h2>  
-                    
-                <footer>
-                    <p>&copy; 'Bos in Boston. All rights reserved.</p>
-               </footer> 
+    <h2 class="text">
+      With these options at your disposal, getting from Somerville or Cambridge
+      into Boston is easy and accessible. Whether you prefer the convenience of
+      public transit, the freedom of biking, or the comfort of ridesharing,
+      you’ll find a mode of travel that suits your needs. So grab your bag and
+      hit the road—Boston is waiting for you!
+    </h2>
 
-        </body> 
-
+    <footer>
+      <p>&copy; 'Bos in Boston. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
