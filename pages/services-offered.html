@@ -32,11 +32,11 @@
         text-align: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 81.31px;
+        padding: 81.31px;
       }
 
       .text-box {
-        background-color: #40e0d0ca;
+        /* background-color: #40e0d0ca; */
         justify-content: center;
         align-items: center;
         padding: 20px 40px;
@@ -124,11 +124,12 @@
         }
         .title-page {
           padding-top: 40px;
+          height: 60vh;
         }
 
-        /* .text-box {
-          padding: 20px 20px; 
-        } */
+        .text-box {
+          padding: 5px 5px; 
+        }
         h1 {
           font-size: 28px;
         }
@@ -149,6 +150,7 @@
         .form-options-style {
           padding: 8px;
         }
+
         .form-submit {
           padding: 12px;
         }
@@ -156,6 +158,37 @@
           font-size: 14px; /* Smaller font size for labels */
           display: block; /* Ensure labels are block-level for spacing */
         }
+        input[type="text"],
+        input[type="email"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+      }
+
+      .text-box {
+        /* background-color: #40e0d0ca; */
+        justify-content: center;
+        align-items: center;
+        /* padding: 20px 40px; */
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .title-page {
+        background-image: url("../assets/img/boston-fall.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 81.31px;
       }
     </style>
 
@@ -170,6 +203,20 @@
         $("#navbar").load("../components/navbar.html");
       });
     </script>
+
+
+
+
+
+<script>
+  function confirm(event) {
+    // event.preventDefault(); // Prevents form submission
+     name = document.getElementById('name').value;
+     email = document.getElementById('email').value;
+    alert("Thanks for booking your trip " + name +
+    "! We will send a confirmation email shortly to " + email + ", so excited to see you there");
+  }
+</script>
   </head>
 
   <body>
@@ -209,17 +256,20 @@
           <form class="form">
             <label> Name:</label>
             <input
+            class="form-options-style"
               type="text"
               name="name"
               id="name"
               placeholder="First Last"
               required
             />
+            <br/>
             <label>Email:</label>
-            <input
+            <input 
+            class="form-options-style"
               type="email"
               name="email"
-              id="email1"
+              id="email"
               placeholder="yourname@example.com"
               required
             />
@@ -251,8 +301,11 @@
             <br />
             <input type="radio" name="which" value="no" /> <label>No</label>
 
-            <input class="form-submit" type="submit" value="Book Your Trip" />
+            <input class="form-submit" type="submit" value="Book Your Trip" 
+            onclick="confirm()"/>
+
           </form>
+
         </div>
 
         <div style="padding-top: 180px">
