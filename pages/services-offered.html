@@ -60,7 +60,7 @@
         text-align: center;
       }
 
-     .paragraph p {
+      .paragraph p {
         font-size: 40px;
         text-align: center;
         color: #008080;
@@ -128,7 +128,7 @@
         }
 
         .text-box {
-          padding: 5px 5px; 
+          padding: 5px 5px;
         }
         h1 {
           font-size: 28px;
@@ -201,129 +201,132 @@
     <script>
       $(function () {
         $("#navbar").load("../components/navbar.html");
+        $("#footer").load("../components/footer.html");
       });
     </script>
 
-
-
-
-
-<script>
-  function confirm(event) {
-    // event.preventDefault(); // Prevents form submission
-     name = document.getElementById('name').value;
-     email = document.getElementById('email').value;
-    alert("Thanks for booking your trip " + name +
-    "! We will send a confirmation email shortly to " + email + ", so excited to see you there");
-  }
-</script>
+    <script>
+      function confirm(event) {
+        // event.preventDefault(); // Prevents form submission
+        name = document.getElementById("name").value;
+        email = document.getElementById("email").value;
+        alert(
+          "Thanks for booking your trip " +
+            name +
+            "! We will send a confirmation email shortly to " +
+            email +
+            ", so excited to see you there"
+        );
+      }
+    </script>
   </head>
 
   <body>
     <!-- body and nav -->
-    <div class="flex-container">
-      <div id="navbar"></div>
-      <div class="paragraph">
-        <div class="title-page">
-          <div class="text-box">
-            <h1>Boston and Beyond</h1>
-            <p><strong>Adventures, Getaways, and Fun</strong></p>
-          </div>
+    <div id="navbar"></div>
+    <div class="paragraph">
+      <div class="title-page">
+        <div class="text-box">
+          <h1>Boston and Beyond</h1>
+          <p><strong>Adventures, Getaways, and Fun</strong></p>
         </div>
+      </div>
 
-        <div>
-          <h2>Boston Getaways</h2>
-          <p>
-            <strong>Join us for the perfect escape from campus!</strong
-            ><br />Explore Boston's city life whether you are feeling a fun
-            adventure or a relaxing picnic.
-          </p>
-          <p>
-            Check out our curated itineraries
-            <a href="destination-guides.html" class="btn">here</a> and plan your
-            next adventure with us today!
-          </p>
-          <p>
-            <strong>Trips every Saturday 11 AM - 1 PM EST for free!</strong>
-          </p>
-          <p>
-            Fill this form by Wednesday Noon EST to be considered for that
-            coming Saturday's excursion.
-          </p>
-        </div>
+      <div>
+        <h2>Boston Getaways</h2>
+        <p>
+          <strong>Join us for the perfect escape from campus!</strong
+          ><br />Explore Boston's city life whether you are feeling a fun
+          adventure or a relaxing picnic.
+        </p>
+        <p>
+          Check out our curated itineraries
+          <a href="destination-guides.html" class="btn">here</a> and plan your
+          next adventure with us today!
+        </p>
+        <p>
+          <strong>Trips every Saturday 11 AM - 1 PM EST for free!</strong>
+        </p>
+        <p>
+          Fill this form by Wednesday Noon EST to be considered for that coming
+          Saturday's excursion.
+        </p>
+      </div>
 
-        <div>
-          <form class="form">
-            <label> Name:</label>
-            <input
+      <div>
+        <form class="form">
+          <label> Name:</label>
+          <input
             class="form-options-style"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="First Last"
-              required
-            />
-            <br/>
-            <label>Email:</label>
-            <input 
+            type="text"
+            name="name"
+            id="name"
+            placeholder="First Last"
+            required
+          />
+          <br />
+          <label>Email:</label>
+          <input
             class="form-options-style"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="yourname@example.com"
-              required
-            />
-            <br />
-            <br />
-            <label>Your Itinerary:</label>
-            <select
-              class="form-options-style"
-              id="itinerary"
-              name="itinerary"
-              required
-            >
-              <option value="default">Select</option>
-              <option value="mfa-museum">Museum of Fine Arts</option>
-              <option value="north-end">North End</option>
-              <option value="seaport">Seaport</option>
-              <option value="cambridge">Cambridge</option>
-              <option value="davis-square">Davis Square</option>
-              <option value="picnic-common">Boston Commons</option>
-              <option value="fenway">Fenway</option>
-            </select>
+            type="email"
+            name="email"
+            id="email"
+            placeholder="yourname@example.com"
+            required
+          />
+          <br />
+          <br />
+          <label>Your Itinerary:</label>
+          <select
+            class="form-options-style"
+            id="itinerary"
+            name="itinerary"
+            required
+          >
+            <option value="default">Select</option>
+            <option value="mfa-museum">Museum of Fine Arts</option>
+            <option value="north-end">North End</option>
+            <option value="seaport">Seaport</option>
+            <option value="cambridge">Cambridge</option>
+            <option value="davis-square">Davis Square</option>
+            <option value="picnic-common">Boston Commons</option>
+            <option value="fenway">Fenway</option>
+          </select>
 
-            <label>Have you gone on a trip this semester?</label>
-            <br /><input type="radio" name="which" value="yes" required />
-            <label>Yes, 2 or more</label>
-            <br />
-            <input type="radio" name="which" value="yes" />
-            <label>Yes, only 1</label>
-            <br />
-            <input type="radio" name="which" value="no" /> <label>No</label>
+          <label>Have you gone on a trip this semester?</label>
+          <br /><input type="radio" name="which" value="yes" required />
+          <label>Yes, 2 or more</label>
+          <br />
+          <input type="radio" name="which" value="yes" />
+          <label>Yes, only 1</label>
+          <br />
+          <input type="radio" name="which" value="no" /> <label>No</label>
 
-            <input class="form-submit" type="submit" value="Book Your Trip" 
-            onclick="confirm()"/>
+          <input
+            class="form-submit"
+            type="submit"
+            value="Book Your Trip"
+            onclick="confirm()"
+          />
+        </form>
+      </div>
 
-          </form>
-
-        </div>
-
-        <div style="padding-top: 180px">
-          <h2>What are the steps?</h2>
-          <p>
-            <strong
-              >We take care of all the planning to make the perfect Boston day
-              trip</strong
-            >
-          </p>
-          <p>
-            1. Find the adventure you want<br />2. Fill out the above contact
-            form<br />3. Wait to hear back, check your email<br />4. Explore
-            Boston with fellow 'bos
-          </p>
-          <p><strong>Excited to see you soon!</strong></p>
-        </div>
+      <div style="padding-top: 180px">
+        <h2>What are the steps?</h2>
+        <p>
+          <strong
+            >We take care of all the planning to make the perfect Boston day
+            trip</strong
+          >
+        </p>
+        <p>
+          1. Find the adventure you want<br />2. Fill out the above contact
+          form<br />3. Wait to hear back, check your email<br />4. Explore
+          Boston with fellow 'bos
+        </p>
+        <p><strong>Excited to see you soon!</strong></p>
       </div>
     </div>
   </body>
+  <div id="footer"></div>
 </html>
