@@ -206,6 +206,19 @@
         $("#navbar").load("../components/navbar.html");
       });
     </script>
+
+
+
+
+
+<script>
+  function confirm(event) {
+    // event.preventDefault(); // Prevents form submission
+     name = document.getElementById('name').value;
+    alert("Thanks for booking your trip " + name +
+    "! We will send a confirmation email shortly, so excited to see you there");
+  }
+</script>
   </head>
 
   <body>
@@ -287,8 +300,11 @@
             <br />
             <input type="radio" name="which" value="no" /> <label>No</label>
 
-            <input class="form-submit" type="submit" value="Book Your Trip" />
+            <input class="form-submit" type="submit" value="Book Your Trip" 
+            onclick="confirm()"/>
+
           </form>
+
         </div>
 
         <div style="padding-top: 180px">
