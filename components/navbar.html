@@ -8,152 +8,157 @@
     <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="../styles/index.css" />
     <title>Navbar</title>
-  
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: var(--turquoise);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px;
-      font-family: var(--secondary-font);
-      z-index: 1000;
-    }
 
-    .navbar a {
-      text-decoration: none;
-    }
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--turquoise);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        font-family: var(--secondary-font);
+        z-index: 1000;
+      }
 
-    .logo {
-      font-size: var(--fs-header);
-      color: var(--coral-peach);
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-    }
+      .navbar a {
+        text-decoration: none;
+      }
 
-    .logo:hover {
-      color: var(--off-white);
-    }
+      .logo {
+        font-size: 6.15rem;
+        color: var(--coral-peach);
+        margin: 0;
+        padding: 0 30px 0 0;
+        line-height: 1;
+      }
 
-    .nav-container {
-      display: flex;
-      align-items: center;
-    }
+      .logo:hover {
+        color: var(--off-white);
+      }
 
-    ul#nav {
-      list-style: none;
-      display: flex;
-      font-size: var(--fs-medium);
-      margin: 0;
-      padding: 5px;
-      gap: 30px;
-    }
+      .nav-container {
+        display: flex;
+        align-items: center;
+      }
 
-    ul#nav li {
-      display: inline-block;
-      margin-right: 50px;
-      position: relative;
-      line-height: 50px;
-      text-decoration: none;
-      color: var(--coral-peach);
-      font-weight: 600;
-      text-shadow: 
-        1px 1px 0 #000000, 
-        -1px -1px 0 #000000, 
-        1px -1px 0 #000000,
-        -1px 1px 0 #000000;
-    }
+      ul#nav {
+        list-style: none;
+        display: flex;
+        font-size: var(--fs-medium);
+        margin: 0;
+        padding: 5px;
+        gap: 30px;
+      }
 
-    ul#nav li:hover {
-      color: var(--off-white);
-    }
+      ul#nav li {
+        display: inline-block;
+        margin-right: 50px;
+        position: relative;
+        line-height: 50px;
+        text-decoration: none;
+        color: var(--coral-peach);
+        font-weight: 600;
+        text-shadow: 1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000,
+          -1px 1px 0 #000000;
+      }
 
-    ul#nav li img {
-      height: 50px;
-      width: auto;
-      vertical-align: middle;
-    }
+      ul#nav li:hover {
+        color: var(--off-white);
+      }
 
-    ul#nav li a {
-      text-decoration: none;
-      color: var(--coral-peach);
-      font-weight: 600;
-      align-items: center;
-    }
+      ul#nav li img {
+        height: 50px;
+        width: auto;
+        vertical-align: middle;
+      }
 
-    ul#nav li a:hover {
-      color: var(--off-white);
-    }
+      ul#nav li a {
+        text-decoration: none;
+        color: var(--coral-peach);
+        font-weight: 600;
+        align-items: center;
+      }
 
-    .dropdown {
-      visibility: hidden;
-      position: absolute;
-      background-color: var(--turquoise);
-      padding: 10px;
-      min-width: 200px;
-      box-sizing: border-box;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      left: 50%; 
-      transform: translateX(-50%) translateY(-10px);
-      opacity: 0;
-      border-radius: 15px;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
+      ul#nav li a:hover {
+        color: var(--off-white);
+      }
 
-    .dropdown a {
-      display: block;
-      padding: 5px 10px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+      .dropdown {
+        visibility: hidden;
+        position: absolute;
+        background-color: var(--turquoise);
+        padding: 10px;
+        min-width: 200px;
+        box-sizing: border-box;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        opacity: 0;
+        border-radius: 15px;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
 
-    .dropdown a:hover {
-      background-color: var(--turquoise);
-    }
+      .dropdown a {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        white-space: nowrap;
+      }
 
-    ul#nav li:hover .dropdown {
-      visibility: visible;
-      font-size: var(--fs-small);
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
+      .dropdown a:hover {
+        background-color: var(--turquoise);
+      }
 
-    /* Hamburger - Mobile */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      position: relative;
-      margin-left: 10px;
-      z-index: 1001;
-    }
+      ul#nav li:hover .dropdown {
+        visibility: visible;
+        font-size: var(--fs-small);
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
 
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: var(--coral-peach);
-      margin: 4px 0;
-      transition: 0.4s;
-    }
+      /* Hamburger - Mobile */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001;
+      }
 
-    @media (max-width: 768px) {
-        .logo { 
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--coral-peach);
+        margin: 4px 0;
+        transition: 0.4s;
+      }
+
+      @media (max-width: 1024px) {
+        .logo {
           font-size: var(--fsm-header);
         }
         .nav-container {
           display: none;
           flex-direction: column;
-          width: 100%;
+          align-items: flex-start;
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 250px;
+          height: 100%;
+          background-color: var(--turquoise);
+          z-index: 1000;
         }
 
         .navbar {
@@ -163,10 +168,10 @@
 
         .hamburger {
           display: flex;
-          margin-left: 0;
         }
 
         .nav-container.active {
+          right: 0;
           display: flex;
         }
 
@@ -175,71 +180,81 @@
           flex-direction: column;
           width: 100%;
           padding: 0;
+          margin: 0;
         }
 
         ul#nav li {
-          margin: 0;
           width: 100%;
-          text-align: center;
+          text-align: left;
+          padding: 15px;
+          margin: 0;
+          max-height: 50px;
         }
 
         .dropdown {
-          position: static;
-          transform: none;
-          opacity: 1;
+          position: absolute;
+          left: -40%;
+          top: 0;
+          text-align: right;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(40%);
+        }
+
+        .dropdown a {
+          text-align: right;
         }
 
         ul#nav li:hover .dropdown {
-          position: static;
-          transform: none;
+          visibility: visible;
           opacity: 1;
         }
       }
-  </style>
-</head>
+    </style>
+  </head>
 
-<body>
-  <div class="navbar">
-    <a href="../pages/index.html">
-      <h1 class="logo">'Bos in Boston</h1>
-    </a>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+  <body>
+    <div class="navbar">
+      <a href="../pages/index.html">
+        <h1 class="logo">'Bos in Boston</h1>
+      </a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-container">
+        <ul id="nav">
+          <li>
+            Offerings
+            <div class="dropdown">
+              <a href="../pages/services-offered.html">Services</a>
+              <a href="../pages/destination-guides.html">Destination Guides</a>
+            </div>
+          </li>
+          <li>
+            Resources
+            <div class="dropdown">
+              <a href="../pages/FAQ.html">FAQ</a>
+              <a href="../pages/blog-client-testimonials.html">Testimonials</a>
+              <a href="../pages/travel-resources.html">Travel Guide</a>
+            </div>
+          </li>
+          <li>
+            Discover
+            <div class="dropdown">
+              <a href="../pages/about.html">About Us</a>
+              <a href="../pages/contact.html">Contact Us</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="nav-container">
-      <ul id="nav">
-        <li>
-          Offerings
-          <div class="dropdown">
-            <a href="../pages/services-offered.html">Services</a>
-            <a href="../pages/destination-guides.html">Destination Guides</a>
-          </div>
-        </li>
-        <li>
-          Resources
-          <div class="dropdown">
-            <a href="../pages/FAQ.html">FAQ</a>
-            <a href="../pages/blog-client-testimonials.html">Testimonials</a>
-            <a href="../pages/travel-resources.html">Travel Guide</a>
-          </div>
-        </li>
-        <li>
-          Discover
-          <div class="dropdown">
-            <a href="../pages/about.html">About Us</a>
-            <a href="../pages/contact.html">Contact Us</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script>
-    function toggleMenu() {
-      const navContainer = document.querySelector('.nav-container');
-      navContainer.classList.toggle('active');
-    }
-  </script>
-</body>
+    <script>
+      function toggleMenu() {
+        const navContainer = document.querySelector(".nav-container");
+        navContainer.classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>
