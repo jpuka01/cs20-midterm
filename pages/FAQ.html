@@ -11,17 +11,14 @@
     <style>
       body {
         margin: 0px;
+        padding-top: 80px;
       }
       ul {
         list-style-type: none;
-      }
-      .flex-container {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
+        text-align: center;
       }
       .content {
-        padding-top: 60px;
+        padding-top: 100px;
         text-align: left;
         max-width: 70%;
         margin: 0 auto;
@@ -29,12 +26,16 @@
       }
       .content .question {
         font-family: var(--primary-font);
-        font-size: 30px;
-        color: var(--coral-peach);
+        font-size: var(--fs-large);
+        color: var(--turquoise);
+        padding-bottom: 40px;
       }
       .content .answer {
         font-family: var(--secondary-font);
-        font-size: 18px;
+        font-size: var(--fs-medium);
+        color: var(--coral-peach);
+        line-height: 40px;
+        padding-bottom: 40px;
       }
     </style>
 
@@ -47,56 +48,58 @@
     <script>
       $(function () {
         $("#navbar").load("../components/navbar.html");
+        $("#footer").load("../components/footer.html");
       });
     </script>
   </head>
+  
   <body>
-    <div class="flex-container">
-      <!-- Import Navbar -->
-      <div id="navbar"></div>
-      <!-- Main Section -->
-      <div class="content">
-        <!-- FAQ List -->
-        <ul>
-          <li class="question">What documents do I need?</li>
-          <li class="answer">
-            We will need valid documents to verify your identity.
-          </li>
-          <br />
-          <li class="question">How far in advance should I book?</li>
-          <li class="answer">You must book at least 2 weeks in advance.</li>
-          <br />
-          <li class="question">How do I stay safe while traveling?</li>
-          <li class="answer">
-            Stay aware of your surroundings, avoid displaying valuable items in
-            public, and research local safety conditions before traveling. Use
-            hotel safes for your valuables and keep copies of important
-            documents in case of theft or loss.
-          </li>
-          <br />
-          <li class="question">What should I pack?</li>
-          <li class="answer">
-            Pack light, versatile clothing, a comfortable pair of shoes,
-            travel-sized toiletries, important documents (e.g., ID), chargers,
-            and any medications. Make sure to check the weather forecast for
-            your destination to pack accordingly.
-          </li>
-          <br />
-          <li class="question">Do I need travel insurance?</li>
-          <li class="answer">
-            It's highly recommended to purchase travel insurance to cover
-            unforeseen events like trip cancellations, medical emergencies, or
-            lost luggage.
-          </li>
-          <br />
-          <li class="question">What is the best way to budget?</li>
-          <li class="answer">
-            Many expenses will come with the package, but be sure to set aside
-            extra money for discretionary spending.
-          </li>
-          <br />
-        </ul>
-      </div>
+    <!-- Import Navbar -->
+    <div id="navbar"></div>
+    <!-- Main Section -->
+    <div class="content">
+      <!-- FAQ List -->
+      <ul>
+        <li class="question">What documents do I need?</li>
+        <li class="answer">
+          We will need valid documents to verify your identity.
+        </li>
+        <br />
+        <li class="question">How far in advance should I book?</li>
+        <li class="answer">You must book at least 2 weeks in advance.</li>
+        <br />
+        <li class="question">How do I stay safe while traveling?</li>
+        <li class="answer">
+          Stay aware of your surroundings, avoid displaying valuable items in
+          public, and research local safety conditions before traveling. Use
+          hotel safes for your valuables and keep copies of important documents
+          in case of theft or loss.
+        </li>
+        <br />
+        <li class="question">What should I pack?</li>
+        <li class="answer">
+          Pack light, versatile clothing, a comfortable pair of shoes,
+          travel-sized toiletries, important documents (e.g., ID), chargers, and
+          any medications. Make sure to check the weather forecast for your
+          destination to pack accordingly.
+        </li>
+        <br />
+        <li class="question">Do I need travel insurance?</li>
+        <li class="answer">
+          It's highly recommended to purchase travel insurance to cover
+          unforeseen events like trip cancellations, medical emergencies, or
+          lost luggage.
+        </li>
+        <br />
+        <li class="question">What is the best way to budget?</li>
+        <li class="answer">
+          Many expenses will come with the package, but be sure to set aside
+          extra money for discretionary spending.
+        </li>
+        <br />
+      </ul>
     </div>
   </body>
+  <!-- Import Footer -->
+  <div id="footer"></div>
 </html>

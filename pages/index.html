@@ -21,7 +21,7 @@
         height: 100vh;
       }
       .content {
-        padding-top: 90px;
+        padding-top: 80px;
       }
       .section {
         margin: 100px;
@@ -83,20 +83,19 @@
         color: var(--turquoise);
       }
     </style>
+    <!-- Import Navigation Bar -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#navbar").load("../components/navbar.html");
+        $("#footer").load("../components/footer.html");
+      });
+    </script>
   </head>
-
-  <!-- Import Navigation Bar -->
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    $(function () {
-      $("#navbar").load("../components/navbar.html");
-      $("#footer").load("../components/footer.html");
-    });
-  </script>
 
   <body>
     <!-- Import Navbar -->
