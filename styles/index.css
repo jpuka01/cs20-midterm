@@ -60,6 +60,16 @@ h3 {
         -1px 1px 0 #000000;  
 }
 
+ul {
+    font-family: var(--secondary-font);
+    font-size: var(--fs-medium);
+    text-shadow: 
+        1px 1px 0 #000000, 
+        -1px -1px 0 #000000, 
+        1px -1px 0 #000000,
+        -1px 1px 0 #000000; 
+}
+
 p {
     font-family: var(--secondary-font);
     font-size: var(--fs-medium);
